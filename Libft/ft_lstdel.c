@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_lstdel.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ktrout <marvin@42.fr>                      +#+  +:+       +#+        */
+/*   By: kris <kris@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/06/11 13:40:14 by ktrout            #+#    #+#             */
-/*   Updated: 2019/06/11 13:44:29 by ktrout           ###   ########.fr       */
+/*   Updated: 2020/05/03 11:39:09 by kris             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,10 +19,10 @@
 ** once freed, should be set to NULL.
 */
 
-void	ft_lstdel(t_list **alst, void (*del)(void *, size_t))
+void	ft_lstdel(t_lst **alst, void (*del)(void *, size_t))
 {
-	t_list *next;
-	t_list *temp;
+	t_lst *next;
+	t_lst *temp;
 
 	if (del != NULL && *alst != NULL)
 	{
