@@ -6,7 +6,7 @@
 /*   By: kris <kris@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/03/17 11:22:33 by kris              #+#    #+#             */
-/*   Updated: 2020/05/02 18:15:24 by kris             ###   ########.fr       */
+/*   Updated: 2020/05/05 15:23:06 by kris             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,16 +38,20 @@ typedef struct      ss_stack
 void    stackBuilder(ts_stack *a, ts_stack *b, char **argv, int argc);
 void    exitError(void);
 
-/* input commands */
+/* checker input commands */
 void    swapper(char *line, ts_stack *a, ts_stack *b);
 void    rotater(char *line, ts_stack *a, ts_stack *b);
 void    rev_rotater(char *line, ts_stack *a, ts_stack *b);
 
-/* operations */
+/* checker operations */
 void    swap(t_list **head);
 void    push(t_list **head, t_list **to, t_list **tail);
 void    rotate(t_list **head, t_list **tail);
 void    rev_rotate(t_list **head, t_list **tail);
 void    display_stacks(t_list *a, t_list *b, char *line);
+
+/* push_swap operations */
+t_lst   *algo(ts_stack *a, ts_stack*b);
+int     getCount(ts_stack *sorted);
 
 #endif 
