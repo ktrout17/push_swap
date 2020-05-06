@@ -6,7 +6,7 @@
 /*   By: kris <kris@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/05/05 13:49:05 by kris              #+#    #+#             */
-/*   Updated: 2020/05/05 15:23:36 by kris             ###   ########.fr       */
+/*   Updated: 2020/05/06 09:45:37 by kris             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,14 +28,19 @@ int     isSorted(ts_stack *a) {
 
 int     halfStack_a(ts_stack *a, ts_stack *b, t_lst **cmd) {
     int     count;
-    long    median;
+    int     median;
     char    temp[a->argc * 4];
 
     temp[0] = "\0";
     count = getCount(a);
     median = INT_MAX;
     if (count <= 11 && count > 2)
-        median =
+        median = stackA_med(a);
+    else if (count > 11)
+        median = findTrue_med(a);
+    if (median != INT_MAX)
+        splitAfterMed_a(a, b, median, temp);
+    else
 }
 
 t_lst   *algo(ts_stack *a, ts_stack*b) {
