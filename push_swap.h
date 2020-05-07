@@ -6,7 +6,7 @@
 /*   By: kris <kris@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/03/17 11:22:33 by kris              #+#    #+#             */
-/*   Updated: 2020/05/07 08:32:36 by kris             ###   ########.fr       */
+/*   Updated: 2020/05/07 09:11:20 by kris             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -53,8 +53,13 @@ void    display_stacks(t_list *a, t_list *b, char *line);
 /* push_swap operations */
 t_lst   *algo(ts_stack *a, ts_stack*b);
 int     getCount(ts_stack *sorted);
-int     stackA_med(ts_stack *a);
 int     findTrue_med(ts_stack *a);
+
+/* push_swap stack A functions */
+void    sortA(ts_stack *a, int count, char *temp);
+int     stackA_med(ts_stack *a);
 void    splitAfterMed_a(ts_stack *a, ts_stack *b, int med, char *cmds);
+
+/* push_swap stack B functions */
 
 #endif 

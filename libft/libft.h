@@ -6,7 +6,7 @@
 /*   By: kris <kris@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/21 08:13:54 by ktrout            #+#    #+#             */
-/*   Updated: 2020/05/03 11:41:51 by kris             ###   ########.fr       */
+/*   Updated: 2020/05/07 09:18:37 by kris             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -46,6 +46,7 @@ void				ft_putnbr_fd(int n, int fd);
 void				ft_lstdelone(t_lst **alst, void(*del)(void *, size_t));
 void				ft_lstdel(t_lst **alst, void (*del)(void *, size_t));
 void				ft_lstadd(t_lst **alst, t_lst *new);
+void				ft_lstaddtotail(t_lst **alst, t_lst *new);
 void				ft_lstiter(t_lst *lst, void (*f)(t_lst *elem));
 char				*ft_strcpy(char *dst, const char *src);
 char				*ft_strchr(const char *s, int c);
