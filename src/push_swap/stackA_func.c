@@ -6,13 +6,13 @@
 /*   By: kris <kris@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/05/05 15:24:54 by kris              #+#    #+#             */
-/*   Updated: 2020/05/06 09:55:12 by kris             ###   ########.fr       */
+/*   Updated: 2020/05/07 08:55:04 by kris             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../../push_swap.h"
 
-long    stackA_med(ts_stack *a) {
+int     stackA_med(ts_stack *a) {
     t_list  *temp;
     int     array[12];
     int     i;
@@ -35,7 +35,10 @@ long    stackA_med(ts_stack *a) {
             }
         }
     }
-    return ((!a->ps[a->top]) ? array[3] : array[2]);
+    if (!(a->ps[a->top]))
+        return (array[3]);
+    else
+        return(array[2]);
 }
 
 int     highSwitch_a(ts_stack *a, char *cmds, int med, int *t_rewind) {
@@ -78,7 +81,7 @@ void    splitAfterMed_a(ts_stack *a, ts_stack *b, int med, char *cmds) {
     }
 }
 
-void    IfThreeNum(ts_stack *a, char *temp) {
+void    ifThreeNum_a(ts_stack *a, char *temp) {
     while (!((a->head->next->data < a->head->next->next->data) && (a->head->next->data < a->head->data))) {
         if ((a->head->next->data > a->head->next->next->data) && (a->head->next->data > a->head->next)) {
             rev_rotate(&a->head, &a->tail);
