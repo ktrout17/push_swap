@@ -6,7 +6,7 @@
 /*   By: kris <kris@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/05/05 13:49:05 by kris              #+#    #+#             */
-/*   Updated: 2020/05/10 13:09:17 by kris             ###   ########.fr       */
+/*   Updated: 2020/05/10 13:44:46 by kris             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -43,10 +43,16 @@ int     halfStack_a(ts_stack *a, ts_stack *b, t_lst **cmd) {
     else
         sortA(a, count, temp);
     if (temp[0])
-        ft_lstaddtotail(cmd, ft_lstnew)
+        ft_lstaddtotail(cmd, ft_lstnewstr(temp));
+    if (median == INT_MAX)
+        a->ps[++(a->top)] = a->head;
+    if (median == INT_MAX)
+        return (1);
+    else
+        return (0);
 }
 
-void    pushTo_b(ts_stack *b, ts_stack *a, int count, char *temp) {
+void    push_b(ts_stack *b, ts_stack *a, int count, char *temp) {
     int     i;
     
     i = 0;
@@ -60,7 +66,27 @@ void    pushTo_b(ts_stack *b, ts_stack *a, int count, char *temp) {
     }
 }
 
+void    bToA(ts_stack *a, ts_stack *b, t_lst **cmd) {
+    int     count;
+    int     median;
+    char    temp[a->argc * 4];
 
+    temp[0] = '\0';
+    count = getCount(b);
+    median = INT_MAX;
+    if (count <= 6 && count > 2)
+        median = stackB_med(b);
+    else if (count > 6)
+        median = findTrue_med(b);
+    if (median != INT_MAX)
+        splitAfterMed_a(a, b, median, temp);
+    else
+        sortB(b, count, temp);
+    if (median == INT_MAX)
+        push_b(b, a, count, temp);
+    if (temp[0])
+        ft_lstaddtotail(cmd, ft_lstnewstr(temp));
+}
 
 t_lst   *algo(ts_stack *a, ts_stack*b) {
     t_lst   *cmd;
@@ -70,7 +96,13 @@ t_lst   *algo(ts_stack *a, ts_stack*b) {
     cmd = ft_lstnew((void *)"\0", 1);
     while (!(sort = isSorted(a)) || b->head != NULL) {
         if (!sort) {
-            while ((ret))
+            while ((ret = halfStack_a(a, b, &cmd)) == 0);
+            if (ret == 1)
+                exit(1);
         }
+        else
+            a->ps[++(a->top)] = a->head;
+        bToA(a, b, &cmd);
     }
+    return (cmd);
 }

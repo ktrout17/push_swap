@@ -6,7 +6,7 @@
 /*   By: kris <kris@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/03/17 11:22:33 by kris              #+#    #+#             */
-/*   Updated: 2020/05/07 09:11:20 by kris             ###   ########.fr       */
+/*   Updated: 2020/05/10 13:39:43 by kris             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -61,5 +61,8 @@ int     stackA_med(ts_stack *a);
 void    splitAfterMed_a(ts_stack *a, ts_stack *b, int med, char *cmds);
 
 /* push_swap stack B functions */
+void    sortB(ts_stack *b, int count, char *temp);
+int     stackB_med(ts_stack *b);
+void    splitAfterMed_b(ts_stack *a, ts_stack *b, int med, char *cmds);
 
 #endif 

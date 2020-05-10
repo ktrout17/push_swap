@@ -6,7 +6,7 @@
 /*   By: kris <kris@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/05/03 11:23:53 by kris              #+#    #+#             */
-/*   Updated: 2020/05/03 12:18:54 by kris             ###   ########.fr       */
+/*   Updated: 2020/05/10 13:47:12 by kris             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,7 +33,7 @@ void    freeAll(ts_stack *a, t_lst *cmd) {
 int     main(int argc, char **argv) {
     ts_stack    a;
     ts_stack    b;
-    t_lst       cmd;
+    t_lst       *cmd;
 
     stackBuilder(&a, &b, argv, argc);
     if (!(a.ps = malloc(sizeof(t_list *) * argc)) || !(b.ps = malloc(sizeof(t_list *) * argc)))
@@ -44,4 +44,11 @@ int     main(int argc, char **argv) {
     b.top = 0;
     a.ps[a.top] = NULL;
     b.ps[a.top] = NULL;
+    cmd = algo(&a, &b);
+    while (cmd) {
+        ft_putstr((char *)cmd->content);
+        cmd = cmd->next;
+    }
+    free(b.ps);
+    freeAll(&a, cmd);
 }
