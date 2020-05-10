@@ -6,7 +6,7 @@
 /*   By: kris <kris@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/05/05 13:49:05 by kris              #+#    #+#             */
-/*   Updated: 2020/05/07 09:19:17 by kris             ###   ########.fr       */
+/*   Updated: 2020/05/10 13:09:17 by kris             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -45,6 +45,22 @@ int     halfStack_a(ts_stack *a, ts_stack *b, t_lst **cmd) {
     if (temp[0])
         ft_lstaddtotail(cmd, ft_lstnew)
 }
+
+void    pushTo_b(ts_stack *b, ts_stack *a, int count, char *temp) {
+    int     i;
+    
+    i = 0;
+    if (count == -1) 
+        count = 3;
+    else
+        count = count;
+    while (i++ < count) {
+        push(&b->head, &a->head, &a->tail);
+        ft_strcat(temp, "pa\n");
+    }
+}
+
+
 
 t_lst   *algo(ts_stack *a, ts_stack*b) {
     t_lst   *cmd;
