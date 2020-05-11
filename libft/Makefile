@@ -1,5 +1,5 @@
 NAME = libft.a
-FLAGS = -Wall -Werror -Wextra
+FLAGS = -Wall  -Wextra
 OBJ = *.o
 SRC = *.c
 OPTIONS = -c

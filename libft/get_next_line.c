@@ -3,14 +3,14 @@
 /*                                                        :::      ::::::::   */
 /*   get_next_line.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ktrout <ktrout@student.42.fr>              +#+  +:+       +#+        */
+/*   By: kris <kris@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/07/10 08:29:52 by ktrout            #+#    #+#             */
-/*   Updated: 2019/08/06 09:48:35 by ktrout           ###   ########.fr       */
+/*   Updated: 2020/05/11 14:01:30 by kris             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "./libft/libft.h"
+#include "libft.h"
 #include "get_next_line.h"
 
 static int		verify_newline(char **stack, char **line)
