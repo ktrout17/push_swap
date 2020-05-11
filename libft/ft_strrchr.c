@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strrchr.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ktrout <marvin@42.fr>                      +#+  +:+       +#+        */
+/*   By: kris <kris@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/22 14:37:43 by ktrout            #+#    #+#             */
-/*   Updated: 2019/05/28 07:36:51 by ktrout           ###   ########.fr       */
+/*   Updated: 2020/05/11 12:45:11 by kris             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,7 +30,7 @@ char	*ft_strrchr(const char *s, int c)
 			last = (char *)s;
 		++s;
 	}
-	if (last != '\0')
+	if (last)
 		return (last);
 	if (c == '\0')
 		return ((char *)s);

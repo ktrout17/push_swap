@@ -2,7 +2,7 @@ NAME = libft.a
 FLAGS = -Wall -Werror -Wextra
 OBJ = *.o
 SRC = *.c
-OPTIONS = -c -I.
+OPTIONS = -c
 
 all : $(NAME)
 

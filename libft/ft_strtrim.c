@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strtrim.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ktrout <marvin@42.fr>                      +#+  +:+       +#+        */
+/*   By: kris <kris@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/06/05 09:51:24 by ktrout            #+#    #+#             */
-/*   Updated: 2019/06/05 10:27:28 by ktrout           ###   ########.fr       */
+/*   Updated: 2020/05/11 12:55:08 by kris             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,7 +37,7 @@ char	*ft_strtrim(char const *s)
 			&& s[start] != '\0')
 		len--;
 	newstr = ft_strsub(s, start, (len - start));
-	if (newstr != '\0')
+	if (newstr)
 		return (newstr);
 	return (NULL);
 }

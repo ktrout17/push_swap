@@ -6,7 +6,7 @@
 /*   By: kris <kris@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/06/11 14:29:00 by ktrout            #+#    #+#             */
-/*   Updated: 2020/05/04 08:22:32 by kris             ###   ########.fr       */
+/*   Updated: 2020/05/11 13:36:46 by kris             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,6 +19,9 @@
 
 void	ft_lstadd(t_lst **alst, t_lst *new)
 {
-	new->next = *alst;
-	*alst = new;
+	if (alst != NULL && new != NULL)
+	{
+		new->next = *alst;
+		*alst = new;
+	}
 }

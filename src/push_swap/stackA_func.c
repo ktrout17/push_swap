@@ -6,7 +6,7 @@
 /*   By: kris <kris@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/05/05 15:24:54 by kris              #+#    #+#             */
-/*   Updated: 2020/05/07 08:55:04 by kris             ###   ########.fr       */
+/*   Updated: 2020/05/11 08:37:02 by kris             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -108,5 +108,5 @@ void    sortA(ts_stack *a, int count, char *temp) {
         }
         return ;
     }
-    IfThreeNum(a, temp);
+    ifThreeNum_a(a, temp);
 }

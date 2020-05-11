@@ -32,7 +32,7 @@ NAME_C = checker
 
 NAME_P = push_swap
 
-FLAGS = -Wall -Wextra -Werror
+FLAGS = -Wall -Wextra
 
 all : library $(NAME_C) $(NAME_P)
 

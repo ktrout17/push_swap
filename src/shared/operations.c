@@ -6,7 +6,7 @@
 /*   By: kris <kris@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/05/02 16:58:45 by kris              #+#    #+#             */
-/*   Updated: 2020/05/02 18:27:34 by kris             ###   ########.fr       */
+/*   Updated: 2020/05/11 13:22:20 by kris             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 void    swap(t_list **head) {
     t_list  *temp;
     
-    if (*head == NULL || (*head)->next = NULL)
+    if (*head == NULL || (*head)->next == NULL)
         return ;
     temp = *head;
     *head = (*head)->next;
@@ -56,7 +56,7 @@ void    rotate(t_list **head, t_list **tail) {
 }
 
 void    rev_rotate(t_list **head, t_list **tail) {
-    if (*head == NULL || *tail == NULL || (*tail)->prev = NULL)
+    if (*head == NULL || *tail == NULL || (*tail)->prev == NULL)
         return ;
     (*head)->prev = *tail;
     (*tail)->next = *head;
