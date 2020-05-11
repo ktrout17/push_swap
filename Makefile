@@ -6,7 +6,7 @@ LIB.A = libft.a
 
 CH_SRC_NAME = checker/mainProgram.c checker/inputCmds.c
 
-P_SRC_NAME = push_swap/main.c push_swap/get_median.c push_swap/a_functions.c push_swap/b_functions.c push_swap/solver.c
+P_SRC_NAME = push_swap/mainProgram.c push_swap/findMedian.c push_swap/stackA_func.c push_swap/stackB_func.c push_swap/algo.c
 
 CO_SRC_NAME = shared/operations.c shared/stackBuilder.c
 
