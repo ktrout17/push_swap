@@ -1,8 +1,30 @@
 NAME = push_swap.a
 LIB = libft
 LIB.A = libft.a
-FLAGS = -Wall -Werror -Wextra
+LIB_SRC = libft/*.c
+LIB_OBJ = libft/*.o
+FLAGS = -Wall -Wextra
+OPTIONS = -c
+OBJ = push_swap.o checker.o
+PS_SRC = push_swap.h src/push_swap/mainProgram.c src/push_swap/findMedian.c src/push_swap/stackA_func.c src/push_swap/stackB_func.c src/push_swap/algo.c libft/*.c
+CH_SRC = push_swap.h src/checker/mainProgram.c src/checker/inputCmds.c libft/*.c
+SHARED_SRC = push_swap.h src/shared/operations.c src/shared/stackBuilder.c libft/*.c
 
+all: push_swap checker
+
+push_swap:
+	gcc $(FLAGS) $(PS_SRC) -o push_swap
+
+checker:
+	gcc $(FLAGS) $(CH_SRC) -o checker
+
+clean:
+	/bin/rm -f $(OBJ) $(LIB_OBJ) *.o
+
+fclean: clean
+	/bin/rm -f push_swap checker
+
+re: fclean all
 
 # INCLUDES = -I libft/Includes -I.
 
