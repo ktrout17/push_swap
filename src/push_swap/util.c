@@ -1,7 +1,7 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   remover.c                                      :+:      :+:    :+:   */
+/*   util.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: kris <kris@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
@@ -28,6 +28,28 @@ char *delete_first(t_list **stack)
 	return (ret);
 }
 
+char *delete_last(t_list **stack)
+{
+	char *ret;
+	t_list *curr;
+
+	ret = "Error";
+	curr = NULL;
+	if ((*stack)->next == NULL)
+	{
+		ret = ft_itoa((*stack)->data);
+		free(*stack);
+		return (ret);
+	}
+	curr = *stack;
+	while (curr->next->next != NULL)
+		curr = curr->next;
+	ret = ft_itoa(curr->next->data);
+	free(curr->next);
+	curr->next = NULL;
+	return (ret);
+}
+
 t_list *new_node(void)
 {
 	t_list *node;
@@ -48,4 +70,15 @@ void add_tohead(t_list **stack, int data)
 	node_new = new_node();
 	init_node(node_new, data, *stack);
 	*stack = node_new;
+}
+
+void add_totail(t_list **stack, int data)
+{
+	t_list *curr;
+
+	curr = *stack;
+	while (curr->next != NULL)
+		curr = curr->next;
+	curr->next = new_node();
+	init_node(curr->next, data, NULL);
 }

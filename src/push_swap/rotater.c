@@ -1,34 +1,45 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   pusher.c                                           :+:      :+:    :+:   */
+/*   rotater.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: krissyleemc <krissyleemc@student.42.fr>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/05/07 08:27:41 by kris              #+#    #+#             */
-/*   Updated: 2020/05/13 21:09:42 by krissyleemc      ###   ########.fr       */
+/*   Created: 2020/05/05 15:17:39 by kris              #+#    #+#             */
+/*   Updated: 2020/05/13 21:20:39 by krissyleemc      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../../push_swap.h"
 
-static void push(t_list **from, t_list **to)
+static void move_up(t_list **stack)
 {
-	char *top;
+	char *first;
 
-	top = delete_first(from);
-	if (ft_strcmp(top, "Error") == 0)
+	first = NULL;
+	if (*stack == NULL)
 		return;
-	add_tohead(to, ft_atoi(top));
-	ft_strdel(&top);
+	if ((*stack)->next == NULL)
+		return;
+	first = delete_first(stack);
+	if (ft_strcmp(first, "Error") == 0)
+		return;
+	add_totail(stack, ft_atoi(first));
+	ft_strdel(&first);
 }
 
-void pa(t_list **stack_b, t_list **stack_a)
+void ra(t_list **stack_a)
 {
-	push(stack_b, stack_a);
+	move_up(stack_a);
 }
 
-void pb(t_list **stack_a, t_list **stack_b)
+void rb(t_list **stack_b)
 {
-	push(stack_a, stack_b);
+	move_up(stack_b);
+}
+
+void rr(t_list **stack_a, t_list **stack_b)
+{
+	ra(stack_a);
+	rb(stack_b);
 }
