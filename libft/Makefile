@@ -10,6 +10,7 @@ $(NAME):
 	gcc $(FLAGS) $(OPTIONS) $(SRC)
 	ar rc $(NAME) $(OBJ)
 	ranlib $(NAME)
+	@echo "libft.a compiled"
 
 clean:
 	/bin/rm -f $(OBJ)

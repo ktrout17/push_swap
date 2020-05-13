@@ -65,18 +65,3 @@ void    rev_rotate(t_list **head, t_list **tail) {
     (*tail)->next = NULL;
     (*head)->prev = NULL;
 }
-
-void    display_stacks(t_list *a, t_list *b, char *line) {
-    t_list  *temp;
-    
-    temp = a;
-    ft_putstr('A\n');
-    ft_putstr('__\n');
-    ft_putstr(line);
-    while (temp) {
-        ft_putstr(temp->data);
-        ft_putchar(' ');
-        temp = temp->next;
-    }
-    ft_putchar('\n');
-}
