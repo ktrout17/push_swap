@@ -1,24 +1,46 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   operations.c                                       :+:      :+:    :+:   */
+/*   swapper.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: krissyleemc <krissyleemc@student.42.fr>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/05/02 16:58:45 by kris              #+#    #+#             */
-/*   Updated: 2020/05/13 20:23:03 by krissyleemc      ###   ########.fr       */
+/*   Created: 2020/05/05 15:24:54 by kris              #+#    #+#             */
+/*   Updated: 2020/05/13 20:19:51 by krissyleemc      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../../push_swap.h"
 
-int op(t_list **stack_a, t_list **stack_b, char *cmd)
+static void swap(t_list **stack)
 {
-	if (ft_strcmp(cmd, "sa") == 0)
-		sa(stack_a);
-	else if (ft_strcmp(cmd, "sb") == 0)
-		sb(stack_b);
-	else if (ft_strcmp(cmd, "ss") == 0)
-		ss(stack_a, stack_b);
-	else if (ft_strcmp(cmd, "pa") == 0)
+	t_list *head;
+	t_list *next;
+	int temp;
+
+	head = *stack;
+	if (head == NULL)
+		return;
+	next = head->next;
+	if (next == NULL)
+		return;
+	temp = head->data;
+	head->data = next->data;
+	next->data = temp;
+}
+
+void sa(t_list **stack_a)
+{
+	swap(stack_a);
+}
+
+void sb(t_list **stack_b)
+{
+	swap(stack_b);
+}
+
+void ss(t_list **stack_a, t_list **stack_b)
+{
+	sa(stack_a);
+	sb(stack_b);
 }
