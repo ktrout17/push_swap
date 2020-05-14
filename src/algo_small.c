@@ -6,7 +6,7 @@
 /*   By: krissyleemc <krissyleemc@student.42.fr>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/05/14 19:58:14 by krissyleemc       #+#    #+#             */
-/*   Updated: 2020/05/14 20:28:58 by krissyleemc      ###   ########.fr       */
+/*   Updated: 2020/05/14 20:45:25 by krissyleemc      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -54,5 +54,19 @@ void sort5(t_list **stack_a, t_list **stack_b)
     while (listlen(stack_a) > 3)
     {
         min = get_min(stack_a);
+        steps = get_steps(stack_a, min);
+        if ((get_pos(stack_a, min)) > (get_midlen(listlen(stack_a))))
+            cmds = "rra";
+        else
+            cmds = "ra";
+        while (steps > 0)
+        {
+            print(stack_a, stack_b, cmds);
+            steps--;
+        }
+        print(stack_a, stack_b, "pb");
     }
+    sort3(stack_a);
+    print(stack_a, stack_b, "pa");
+    print(stack_a, stack_b, "pa");
 }

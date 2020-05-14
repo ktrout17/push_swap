@@ -6,7 +6,7 @@
 /*   By: krissyleemc <krissyleemc@student.42.fr>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/03/17 11:22:33 by kris              #+#    #+#             */
-/*   Updated: 2020/05/14 20:33:25 by krissyleemc      ###   ########.fr       */
+/*   Updated: 2020/05/14 20:39:09 by krissyleemc      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -85,6 +85,8 @@ int firstint(t_list **stack);
 int lastint(t_list **stack);
 int get_min(t_list **stack);
 int get_midlen(int len);
+int get_pos(t_list **stack, int data);
+int get_steps(t_list **stack, int data);
 
 void sort3(t_list **stack_a);
 
