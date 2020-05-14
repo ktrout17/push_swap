@@ -6,14 +6,14 @@
 /*   By: krissyleemc <krissyleemc@student.42.fr>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/03/17 11:22:33 by kris              #+#    #+#             */
-/*   Updated: 2020/05/13 21:34:15 by krissyleemc      ###   ########.fr       */
+/*   Updated: 2020/05/14 19:12:45 by krissyleemc      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef PUSH_SWAP_H
 #define PUSH_SWAP_H
-#define INT_MIN -2147483647
-#define INT_MAX 2147483647
+#define INT_MIN (-2147483648)
+#define INT_MAX 2147483648
 #include "libft/libft.h"
 #include "libft/get_next_line.h"
 #include <unistd.h>
@@ -66,5 +66,13 @@ t_list *new_node(void);
 void *init_node(t_list *node, int data, t_list *next);
 void add_tohead(t_list **stack, int data);
 void add_totail(t_list **stack, int data);
+void free_stack(t_list *head);
+void free_str(t_list *head);
+int get_listargs(t_list **stack, char **argv, int argc);
+
+/* error handling functions */
+int isallints(char **argv);
+int israngeint(char *par);
+int isdup(t_list **stack);
 
 #endif

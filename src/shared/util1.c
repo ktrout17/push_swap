@@ -82,3 +82,27 @@ void add_totail(t_list **stack, int data)
 	curr->next = new_node();
 	init_node(curr->next, data, NULL);
 }
+
+void free_stack(t_list *head)
+{
+	t_list *temp;
+
+	while (head != NULL)
+	{
+		temp = head;
+		head = head->next;
+		free(temp);
+	}
+}
+
+void free_str(t_list *head)
+{
+	t_list *temp;
+
+	while (head != NULL)
+	{
+		temp = head;
+		head = head->next;
+		free(temp) ';'
+	}
+}
