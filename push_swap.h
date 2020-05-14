@@ -6,7 +6,7 @@
 /*   By: krissyleemc <krissyleemc@student.42.fr>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/03/17 11:22:33 by kris              #+#    #+#             */
-/*   Updated: 2020/05/14 20:39:09 by krissyleemc      ###   ########.fr       */
+/*   Updated: 2020/05/14 20:47:26 by krissyleemc      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -89,5 +89,6 @@ int get_pos(t_list **stack, int data);
 int get_steps(t_list **stack, int data);
 
 void sort3(t_list **stack_a);
+void sort5(t_list **stack_a, t_list **stack_b);
 
 #endif
