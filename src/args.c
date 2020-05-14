@@ -6,11 +6,11 @@
 /*   By: krissyleemc <krissyleemc@student.42.fr>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/03/17 14:15:56 by kris              #+#    #+#             */
-/*   Updated: 2020/05/14 19:10:50 by krissyleemc      ###   ########.fr       */
+/*   Updated: 2020/05/14 19:40:10 by krissyleemc      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../../push_swap.h"
+#include "../push_swap.h"
 
 static int get_args(t_list **stack, char **argv, int start)
 {

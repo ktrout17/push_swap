@@ -1,34 +1,34 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   pusher.c                                           :+:      :+:    :+:   */
+/*   issorted.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: krissyleemc <krissyleemc@student.42.fr>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/05/07 08:27:41 by kris              #+#    #+#             */
-/*   Updated: 2020/05/13 21:09:42 by krissyleemc      ###   ########.fr       */
+/*   Created: 2020/05/14 19:42:20 by krissyleemc       #+#    #+#             */
+/*   Updated: 2020/05/14 19:49:57 by krissyleemc      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../../push_swap.h"
+#include "../push_swap.h"
 
-static void push(t_list **from, t_list **to)
+int issorted(t_list **stack_a, t_list **stack_b)
 {
-	char *top;
+    t_list *curr;
+    t_list *next;
 
-	top = delete_first(from);
-	if (ft_strcmp(top, "Error") == 0)
-		return;
-	add_tohead(to, ft_atoi(top));
-	ft_strdel(&top);
-}
-
-void pa(t_list **stack_b, t_list **stack_a)
-{
-	push(stack_b, stack_a);
-}
-
-void pb(t_list **stack_a, t_list **stack_b)
-{
-	push(stack_a, stack_b);
+    if (isempty(stack_b) == 0)
+        return (0);
+    curr = *stack_a;
+    next = (*stack_a)->next;
+    if (curr == NULL)
+        return (1);
+    while (next)
+    {
+        if (curr->data > next->data)
+            return (0);
+        curr = next;
+        next = curr->next;
+    }
+    return (1);
 }

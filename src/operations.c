@@ -6,11 +6,11 @@
 /*   By: krissyleemc <krissyleemc@student.42.fr>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/05/02 16:58:45 by kris              #+#    #+#             */
-/*   Updated: 2020/05/13 21:36:53 by krissyleemc      ###   ########.fr       */
+/*   Updated: 2020/05/14 19:56:21 by krissyleemc      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../../push_swap.h"
+#include "../push_swap.h"
 
 int op(t_list **stack_a, t_list **stack_b, char *cmd)
 {
@@ -39,4 +39,10 @@ int op(t_list **stack_a, t_list **stack_b, char *cmd)
 	else
 		return (-1);
 	return (2);
+}
+
+void print(t_list **stack_a, t_list **stack_b, char *cmd)
+{
+	if (op(stack_a, stack_b, cmd) == 2)
+		ft_putendl(cmd);
 }

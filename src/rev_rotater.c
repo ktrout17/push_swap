@@ -1,45 +1,44 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   rotater.c                                          :+:      :+:    :+:   */
+/*   rev_rotater.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: krissyleemc <krissyleemc@student.42.fr>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/05/05 15:17:39 by kris              #+#    #+#             */
-/*   Updated: 2020/05/13 21:20:39 by krissyleemc      ###   ########.fr       */
+/*   Created: 2020/05/05 13:49:05 by kris              #+#    #+#             */
+/*   Updated: 2020/05/14 19:40:25 by krissyleemc      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../../push_swap.h"
+#include "../push_swap.h"
 
-static void move_up(t_list **stack)
+static void move_down(t_list **stack)
 {
-	char *first;
+	char *last;
 
-	first = NULL;
 	if (*stack == NULL)
 		return;
 	if ((*stack)->next == NULL)
 		return;
-	first = delete_first(stack);
-	if (ft_strcmp(first, "Error") == 0)
+	last = delete_last(stack);
+	if (ft_strcmp(last, "Error") == 0)
 		return;
-	add_totail(stack, ft_atoi(first));
-	ft_strdel(&first);
+	add_tohead(stack, ft_atoi(last));
+	ft_strdel(&last);
 }
 
-void ra(t_list **stack_a)
+void rra(t_list **stack_a)
 {
-	move_up(stack_a);
+	move_down(stack_a);
 }
 
-void rb(t_list **stack_b)
+void rrb(t_list **stack_b)
 {
-	move_up(stack_b);
+	move_down(stack_b);
 }
 
-void rr(t_list **stack_a, t_list **stack_b)
+void rrr(t_list **stack_a, t_list **stack_b)
 {
-	ra(stack_a);
-	rb(stack_b);
+	rra(stack_a);
+	rrb(stack_b);
 }

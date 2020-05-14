@@ -6,11 +6,11 @@
 /*   By: krissyleemc <krissyleemc@student.42.fr>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/05/05 15:24:54 by kris              #+#    #+#             */
-/*   Updated: 2020/05/13 20:19:51 by krissyleemc      ###   ########.fr       */
+/*   Updated: 2020/05/14 19:40:02 by krissyleemc      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../../push_swap.h"
+#include "../push_swap.h"
 
 static void swap(t_list **stack)
 {

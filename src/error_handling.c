@@ -6,11 +6,11 @@
 /*   By: krissyleemc <krissyleemc@student.42.fr>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/05/02 14:21:21 by kris              #+#    #+#             */
-/*   Updated: 2020/05/14 18:47:05 by krissyleemc      ###   ########.fr       */
+/*   Updated: 2020/05/14 19:39:56 by krissyleemc      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../../push_swap.h"
+#include "../push_swap.h"
 
 static int isargstr(char *str)
 {

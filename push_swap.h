@@ -6,7 +6,7 @@
 /*   By: krissyleemc <krissyleemc@student.42.fr>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/03/17 11:22:33 by kris              #+#    #+#             */
-/*   Updated: 2020/05/14 19:12:45 by krissyleemc      ###   ########.fr       */
+/*   Updated: 2020/05/14 20:33:25 by krissyleemc      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,6 +39,7 @@ typedef struct ss_stack
 
 /* operations */
 int op(t_list **stack_a, t_list **stack_b, char *cmd);
+void print(t_list **stack_a, t_list **stack_b, char *cmd);
 
 /* swap functions */
 void sa(t_list **stack_a);
@@ -74,5 +75,17 @@ int get_listargs(t_list **stack, char **argv, int argc);
 int isallints(char **argv);
 int israngeint(char *par);
 int isdup(t_list **stack);
+
+/* algo */
+int issorted(t_list **stack_a, t_list **stack_b);
+int isempty(t_list **stack);
+int listlen(t_list **stack);
+int getby_pos(t_list **stack, int pos);
+int firstint(t_list **stack);
+int lastint(t_list **stack);
+int get_min(t_list **stack);
+int get_midlen(int len);
+
+void sort3(t_list **stack_a);
 
 #endif

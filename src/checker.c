@@ -10,7 +10,7 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../../push_swap.h"
+#include "../push_swap.h"
 
 static int inst(t_list **stack_a, t_list **stack_b)
 {
@@ -45,5 +45,5 @@ int main(int argc, char **argv)
 			return (-1);
 		if (inst(&stack_a, &stack_b) == -1)
 			return (-1);
-		}
+	}
 }
