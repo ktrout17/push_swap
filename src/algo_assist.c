@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   algo_assist.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: krissyleemc <krissyleemc@student.42.fr>    +#+  +:+       +#+        */
+/*   By: kris <kris@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/05/14 20:25:28 by krissyleemc       #+#    #+#             */
-/*   Updated: 2020/05/14 20:36:44 by krissyleemc      ###   ########.fr       */
+/*   Updated: 2020/05/15 09:48:21 by kris             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -54,4 +54,42 @@ int     get_pos(t_list **stack, int data)
         curr = curr->next;
     }
     return (pos);
+}
+
+int     get_max(t_list **stack)
+{
+    t_list  *curr;
+    int     max;
+
+    curr = *stack;
+    max = curr->data;
+    curr = curr->next;
+    while (curr)
+    {
+        if (max < curr->data)
+            max = curr->data;
+        curr = curr->next;
+    }
+    return (max);
+}
+
+int     get_smaller(t_list **stack_b, int data)
+{
+    t_list  *curr;
+    int     smaller;
+
+    curr = *stack_b;
+    if (get_min(stack_b) < data)
+    {
+        smaller = get_min(stack_b);
+        while (curr)
+        {
+            if ((smaller < curr->data) && (curr->data < data))
+                smaller = curr->data;
+            curr = curr->next;
+        }
+    }
+    else
+        smaller = get_max(stack_b);
+    return (smaller);
 }

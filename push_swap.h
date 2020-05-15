@@ -6,7 +6,7 @@
 /*   By: kris <kris@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/03/17 11:22:33 by kris              #+#    #+#             */
-/*   Updated: 2020/05/15 09:01:55 by kris             ###   ########.fr       */
+/*   Updated: 2020/05/15 09:52:04 by kris             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -87,7 +87,10 @@ int					get_min(t_list **stack);
 int					get_midlen(int len);
 int					get_pos(t_list **stack, int data);
 int					get_steps(t_list **stack, int data);
+int     			get_max(t_list **stack);
+int     			get_smaller(t_list **stack_b, int data);
 
+void        		algo_stack(t_list **stack_a, t_list **stack_b);
 void				sort3(t_list **stack_a);
 void				sort5(t_list **stack_a, t_list **stack_b);
 
