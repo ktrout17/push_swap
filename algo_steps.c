@@ -6,7 +6,7 @@
 /*   By: kris <kris@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/05/14 20:29:26 by krissyleemc       #+#    #+#             */
-/*   Updated: 2020/05/15 12:21:35 by kris             ###   ########.fr       */
+/*   Updated: 2020/05/15 13:15:21 by kris             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -78,4 +78,26 @@ ts_stack        *get_smallsteps(t_list **stack_a, t_list **stack_b)
         curr = curr->next;
     }
     return (get_smlsteps(stack_a, stack_b, smallsteps_data, smallsteps));
+}
+
+void			display_smlsteps(ts_stack *smallstepper)
+{
+	ft_putstr("VALUE: ");
+	ft_putnbr(smallstepper->data);
+	ft_putstr("\nVALUE POSITION: ");
+	ft_putnbr(smallstepper->a_pos);
+	ft_putstr("\nSTEPS A: ");
+	ft_putnbr(smallstepper->a_step);
+	ft_putstr("\nSTEPS B: ");
+	ft_putnbr(smallstepper->b_step);
+	ft_putstr("\nTOTAL STEPS: ");
+	ft_putnbr(smallstepper->all_step);
+	ft_putstr("\nLESS OR BIG: ");
+	ft_putnbr(smallstepper->smaller);
+	ft_putstr("\nPOSITION OF LESS OR BIG: ");
+	ft_putnbr(smallstepper->smaller_pos);
+	ft_putstr("\nCOMMANDS IN STACK A: ");
+	ft_putendl(smallstepper->a_cmd);
+	ft_putstr("COMMANDS IN STACK B: ");
+	ft_putendl(smallstepper->b_cmd);
 }

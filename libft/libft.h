@@ -6,7 +6,7 @@
 /*   By: kris <kris@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/21 08:13:54 by ktrout            #+#    #+#             */
-/*   Updated: 2020/05/11 13:06:44 by kris             ###   ########.fr       */
+/*   Updated: 2020/05/15 13:20:43 by kris             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -86,6 +86,7 @@ int					ft_isupper(int c);
 int					ft_islower(int c);
 int					ft_isprime(int c);
 int					count_words(char const *str, char delim, int index);
+int					ft_intlen(int n);
 t_lst				*ft_lstnew(void const *content, size_t content_size);
 t_lst				*ft_lstnewstr(char *content);
 t_lst				*ft_lstmap(t_lst *lst, t_lst *(*f)(t_lst *elem));

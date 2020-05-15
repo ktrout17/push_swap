@@ -6,7 +6,7 @@
 /*   By: kris <kris@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/03/17 11:22:33 by kris              #+#    #+#             */
-/*   Updated: 2020/05/15 12:57:57 by kris             ###   ########.fr       */
+/*   Updated: 2020/05/15 13:24:11 by kris             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -95,6 +95,9 @@ int					get_steps(t_list **stack, int data);
 int     			get_max(t_list **stack);
 int     			get_smaller(t_list **stack_b, int data);
 ts_stack        	*get_smallsteps(t_list **stack_a, t_list **stack_b);
+void				display_smlsteps(ts_stack *smallstepper);
+void				displist(t_list **stack);
+void				displists(t_list **stack_a, t_list **stack_b);
 
 void        		algo_stack(t_list **stack_a, t_list **stack_b);
 void				sort3(t_list **stack_a);
