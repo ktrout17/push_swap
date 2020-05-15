@@ -6,13 +6,13 @@
 /*   By: kris <kris@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/05/03 19:28:48 by krissyleemc       #+#    #+#             */
-/*   Updated: 2020/05/15 12:21:38 by kris             ###   ########.fr       */
+/*   Updated: 2020/05/15 13:43:36 by kris             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-void        sort(t_list *stack_a, t_list **stack_b)
+void        sort(t_list **stack_a, t_list **stack_b)
 {
     if (issorted(stack_a, stack_b) == 0)
     {

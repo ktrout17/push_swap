@@ -6,7 +6,7 @@
 /*   By: kris <kris@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/05/14 19:58:14 by krissyleemc       #+#    #+#             */
-/*   Updated: 2020/05/15 12:21:33 by kris             ###   ########.fr       */
+/*   Updated: 2020/05/15 13:52:52 by kris             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,9 +34,9 @@ static void     sort3_cmds(t_list **stack_a, int first, int mid, int last)
 
 void            sort3(t_list **stack_a)
 {
-    int first;
-    int mid;
-    int last;
+    int     first;
+    int     mid;
+    int     last;
 
     first = firstint(stack_a);
     mid = getby_pos(stack_a, 2);
@@ -46,9 +46,9 @@ void            sort3(t_list **stack_a)
 
 void            sort5(t_list **stack_a, t_list **stack_b)
 {
-    int min;
-    int steps;
-    char *cmds;
+    int     min;
+    int     steps;
+    char    *cmds;
 
     cmds = NULL;
     while (listlen(stack_a) > 3)

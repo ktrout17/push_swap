@@ -6,7 +6,7 @@
 /*   By: kris <kris@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/05/02 14:21:21 by kris              #+#    #+#             */
-/*   Updated: 2020/05/15 12:21:40 by kris             ###   ########.fr       */
+/*   Updated: 2020/05/15 13:36:54 by kris             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@ static int		isargstr(char *str)
 	int		i;
 
 	i = 0;
-	if (str[i] == '-')
+	if (str[0] == '-')
 		i++;
 	while (str[i])
 	{
@@ -64,9 +64,9 @@ static int		iswhitespace(char c)
 
 int				israngeint(char *par)
 {
-	long	ret;
-	char	*par_cpy;
-	int		sn;
+	long int	ret;
+	char		*par_cpy;
+	int			sn;
 
 	sn = 1;
 	ret = 0;

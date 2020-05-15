@@ -6,7 +6,7 @@
 /*   By: kris <kris@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/03/17 11:22:33 by kris              #+#    #+#             */
-/*   Updated: 2020/05/15 13:24:11 by kris             ###   ########.fr       */
+/*   Updated: 2020/05/15 13:43:42 by kris             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -102,6 +102,6 @@ void				displists(t_list **stack_a, t_list **stack_b);
 void        		algo_stack(t_list **stack_a, t_list **stack_b);
 void				sort3(t_list **stack_a);
 void				sort5(t_list **stack_a, t_list **stack_b);
-void        		sort(t_list *stack_a, t_list **stack_b);
+void        		sort(t_list **stack_a, t_list **stack_b);
 
 #endif

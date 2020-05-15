@@ -6,7 +6,7 @@
 /*   By: kris <kris@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/05/15 12:30:21 by kris              #+#    #+#             */
-/*   Updated: 2020/05/15 12:30:58 by kris             ###   ########.fr       */
+/*   Updated: 2020/05/15 13:41:08 by kris             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,6 +15,7 @@
 t_list		*new_node(void)
 {
 	t_list	*node;
+
 	node = malloc(sizeof(t_list));
 	return (node);
 }

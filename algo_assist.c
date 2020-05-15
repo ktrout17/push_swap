@@ -6,7 +6,7 @@
 /*   By: kris <kris@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/05/14 20:25:28 by krissyleemc       #+#    #+#             */
-/*   Updated: 2020/05/15 12:21:29 by kris             ###   ########.fr       */
+/*   Updated: 2020/05/15 13:59:33 by kris             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,7 @@ int     get_min(t_list **stack)
     curr = *stack;
     min = curr->data;
     curr = curr->next;
-    while (curr)
+    while (curr != NULL)
     {
         if (min > curr->data)
             min = curr->data;
@@ -46,10 +46,10 @@ int     get_pos(t_list **stack, int data)
 
     curr = *stack;
     pos = 1;
-    while (curr)
+    while (curr != NULL)
     {
         if (curr->data == data)
-            break;
+            break ;
         pos++;
         curr = curr->next;
     }
@@ -64,7 +64,7 @@ int     get_max(t_list **stack)
     curr = *stack;
     max = curr->data;
     curr = curr->next;
-    while (curr)
+    while (curr != NULL)
     {
         if (max < curr->data)
             max = curr->data;
@@ -82,7 +82,7 @@ int     get_smaller(t_list **stack_b, int data)
     if (get_min(stack_b) < data)
     {
         smaller = get_min(stack_b);
-        while (curr)
+        while (curr != NULL)
         {
             if ((smaller < curr->data) && (curr->data < data))
                 smaller = curr->data;
