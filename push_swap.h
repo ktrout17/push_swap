@@ -6,7 +6,7 @@
 /*   By: kris <kris@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/03/17 11:22:33 by kris              #+#    #+#             */
-/*   Updated: 2020/05/15 12:37:51 by kris             ###   ########.fr       */
+/*   Updated: 2020/05/15 12:57:57 by kris             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -70,7 +70,7 @@ void				*init_node(t_list *node, int data, t_list *next);
 void				add_tohead(t_list **stack, int data);
 void				add_totail(t_list **stack, int data);
 void				free_stack(t_list *head);
-void				free_str(t_list *head);
+void				free_str(char **str);
 int					get_listargs(t_list **stack, char **argv, int argc);
 
 /* error handling functions */

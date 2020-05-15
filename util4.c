@@ -6,7 +6,7 @@
 /*   By: kris <kris@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/05/15 12:32:23 by kris              #+#    #+#             */
-/*   Updated: 2020/05/15 12:32:50 by kris             ###   ########.fr       */
+/*   Updated: 2020/05/15 12:58:19 by kris             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,14 +24,15 @@ void		free_stack(t_list *head)
 	}
 }
 
-void		free_str(t_list *head)
+void		free_str(char **str)
 {
-	t_list	*temp;
+	int		i;
 
-	while (head != NULL)
+	i = 0;
+	while (str[i])
 	{
-		temp = head;
-		head = head->next;
-		free(temp);
+		ft_strdel(&str[i]);
+		i++;
 	}
+	ft_strdel(str);
 }
