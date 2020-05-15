@@ -6,7 +6,7 @@
 /*   By: kris <kris@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/03/17 11:22:33 by kris              #+#    #+#             */
-/*   Updated: 2020/05/15 09:52:04 by kris             ###   ########.fr       */
+/*   Updated: 2020/05/15 12:11:29 by kris             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -78,6 +78,9 @@ int					isdup(t_list **stack);
 
 /* algo */
 int					issorted(t_list **stack_a, t_list **stack_b);
+void        		sorted(t_list **stack_a, t_list **stack_b);
+int         		issorted_desc(t_list **stack_b);
+int         		issorted_asc(t_list **stack_a);
 int					isempty(t_list **stack);
 int					listlen(t_list **stack);
 int					getby_pos(t_list **stack, int pos);
@@ -89,6 +92,7 @@ int					get_pos(t_list **stack, int data);
 int					get_steps(t_list **stack, int data);
 int     			get_max(t_list **stack);
 int     			get_smaller(t_list **stack_b, int data);
+ts_stack        	*get_smallsteps(t_list **stack_a, t_list **stack_b);
 
 void        		algo_stack(t_list **stack_a, t_list **stack_b);
 void				sort3(t_list **stack_a);
