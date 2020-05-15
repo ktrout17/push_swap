@@ -12,10 +12,10 @@
 
 #include "../push_swap.h"
 
-char *delete_first(t_list **stack)
+char		*delete_first(t_list **stack)
 {
-	char *ret;
-	t_list *next;
+	char	*ret;
+	t_list	*next;
 
 	ret = "Error";
 	next = NULL;
@@ -28,10 +28,10 @@ char *delete_first(t_list **stack)
 	return (ret);
 }
 
-char *delete_last(t_list **stack)
+char		*delete_last(t_list **stack)
 {
-	char *ret;
-	t_list *curr;
+	char	*ret;
+	t_list	*curr;
 
 	ret = "Error";
 	curr = NULL;
@@ -50,31 +50,31 @@ char *delete_last(t_list **stack)
 	return (ret);
 }
 
-t_list *new_node(void)
+t_list		*new_node(void)
 {
-	t_list *node;
+	t_list	*node;
 	node = malloc(sizeof(t_list));
 	return (node);
 }
 
-void *init_node(t_list *node, int data, t_list *next)
+void		*init_node(t_list *node, int data, t_list *next)
 {
 	node->data = data;
 	node->next = next;
 }
 
-void add_tohead(t_list **stack, int data)
+void		add_tohead(t_list **stack, int data)
 {
-	t_list *node_new;
+	t_list	*node_new;
 
 	node_new = new_node();
 	init_node(node_new, data, *stack);
 	*stack = node_new;
 }
 
-void add_totail(t_list **stack, int data)
+void		add_totail(t_list **stack, int data)
 {
-	t_list *curr;
+	t_list	*curr;
 
 	curr = *stack;
 	while (curr->next != NULL)
@@ -83,9 +83,9 @@ void add_totail(t_list **stack, int data)
 	init_node(curr->next, data, NULL);
 }
 
-void free_stack(t_list *head)
+void		free_stack(t_list *head)
 {
-	t_list *temp;
+	t_list	*temp;
 
 	while (head != NULL)
 	{
@@ -95,14 +95,14 @@ void free_stack(t_list *head)
 	}
 }
 
-void free_str(t_list *head)
+void		free_str(t_list *head)
 {
-	t_list *temp;
+	t_list	*temp;
 
 	while (head != NULL)
 	{
 		temp = head;
 		head = head->next;
-		free(temp) ';'
+		free(temp);
 	}
 }

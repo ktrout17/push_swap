@@ -3,19 +3,19 @@
 /*                                                        :::      ::::::::   */
 /*   issorted.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: krissyleemc <krissyleemc@student.42.fr>    +#+  +:+       +#+        */
+/*   By: kris <kris@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/05/14 19:42:20 by krissyleemc       #+#    #+#             */
-/*   Updated: 2020/05/14 19:49:57 by krissyleemc      ###   ########.fr       */
+/*   Updated: 2020/05/15 09:00:53 by kris             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../push_swap.h"
 
-int issorted(t_list **stack_a, t_list **stack_b)
+int         issorted(t_list **stack_a, t_list **stack_b)
 {
-    t_list *curr;
-    t_list *next;
+    t_list  *curr;
+    t_list  *next;
 
     if (isempty(stack_b) == 0)
         return (0);

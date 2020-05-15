@@ -3,19 +3,19 @@
 /*                                                        :::      ::::::::   */
 /*   args.c                                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: krissyleemc <krissyleemc@student.42.fr>    +#+  +:+       +#+        */
+/*   By: kris <kris@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/03/17 14:15:56 by kris              #+#    #+#             */
-/*   Updated: 2020/05/14 19:40:10 by krissyleemc      ###   ########.fr       */
+/*   Updated: 2020/05/15 09:00:39 by kris             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../push_swap.h"
 
-static int get_args(t_list **stack, char **argv, int start)
+static int      get_args(t_list **stack, char **argv, int start)
 {
-    int val;
-    int i;
+    int     val;
+    int     i;
 
     if (israngeint(argv[start]) == 0)
         return (-1);
@@ -39,11 +39,11 @@ static int get_args(t_list **stack, char **argv, int start)
     return (2);
 }
 
-int get_listargs(t_list **stack, char **argv, int argc)
+int         get_listargs(t_list **stack, char **argv, int argc)
 {
-    char **content;
-    int start;
-    int ret_stats;
+    char    **content;
+    int     start;
+    int     ret_stats;
 
     start = 0;
     ret_stats = 2;

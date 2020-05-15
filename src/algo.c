@@ -3,16 +3,16 @@
 /*                                                        :::      ::::::::   */
 /*   algo.c                                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: krissyleemc <krissyleemc@student.42.fr>    +#+  +:+       +#+        */
+/*   By: kris <kris@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/05/03 19:28:48 by krissyleemc       #+#    #+#             */
-/*   Updated: 2020/05/14 20:21:33 by krissyleemc      ###   ########.fr       */
+/*   Updated: 2020/05/15 08:50:43 by kris             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../push_swap.h"
 
-void sort(t_list *stack_a, t_list **stack_b)
+void        sort(t_list *stack_a, t_list **stack_b)
 {
     if (issorted(stack_a, stack_b) == 0)
     {

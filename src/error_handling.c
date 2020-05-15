@@ -3,18 +3,18 @@
 /*                                                        :::      ::::::::   */
 /*   error_handling.c                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: krissyleemc <krissyleemc@student.42.fr>    +#+  +:+       +#+        */
+/*   By: kris <kris@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/05/02 14:21:21 by kris              #+#    #+#             */
-/*   Updated: 2020/05/14 19:39:56 by krissyleemc      ###   ########.fr       */
+/*   Updated: 2020/05/15 09:00:17 by kris             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../push_swap.h"
 
-static int isargstr(char *str)
+static int		isargstr(char *str)
 {
-	int i;
+	int		i;
 
 	i = 0;
 	if (str[i] == '-')
@@ -28,9 +28,9 @@ static int isargstr(char *str)
 	return (1);
 }
 
-int isallints(char **argv)
+int				isallints(char **argv)
 {
-	int i;
+	int		i;
 
 	i = 1;
 	while (argv[i])
@@ -45,7 +45,7 @@ int isallints(char **argv)
 	return (1);
 }
 
-static int iswhitespace(char c)
+static int		iswhitespace(char c)
 {
 	if (c == ' ')
 		return (1);
@@ -62,11 +62,11 @@ static int iswhitespace(char c)
 	return (0);
 }
 
-int israngeint(char *par)
+int				israngeint(char *par)
 {
-	long ret;
-	char *par_cpy;
-	int sn;
+	long	ret;
+	char	*par_cpy;
+	int		sn;
 
 	sn = 1;
 	ret = 0;
@@ -89,10 +89,10 @@ int israngeint(char *par)
 	return (1);
 }
 
-int isdup(t_list **stack)
+int				isdup(t_list **stack)
 {
-	t_list *node1;
-	t_list *node2;
+	t_list	*node1;
+	t_list	*node2;
 
 	node1 = *stack;
 	node2 = NULL;

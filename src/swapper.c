@@ -3,20 +3,20 @@
 /*                                                        :::      ::::::::   */
 /*   swapper.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: krissyleemc <krissyleemc@student.42.fr>    +#+  +:+       +#+        */
+/*   By: kris <kris@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/05/05 15:24:54 by kris              #+#    #+#             */
-/*   Updated: 2020/05/14 19:40:02 by krissyleemc      ###   ########.fr       */
+/*   Updated: 2020/05/15 09:04:52 by kris             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../push_swap.h"
 
-static void swap(t_list **stack)
+static void		swap(t_list **stack)
 {
-	t_list *head;
-	t_list *next;
-	int temp;
+	t_list		*head;
+	t_list		*next;
+	int			temp;
 
 	head = *stack;
 	if (head == NULL)
@@ -29,17 +29,17 @@ static void swap(t_list **stack)
 	next->data = temp;
 }
 
-void sa(t_list **stack_a)
+void			sa(t_list **stack_a)
 {
 	swap(stack_a);
 }
 
-void sb(t_list **stack_b)
+void			sb(t_list **stack_b)
 {
 	swap(stack_b);
 }
 
-void ss(t_list **stack_a, t_list **stack_b)
+void 			ss(t_list **stack_a, t_list **stack_b)
 {
 	sa(stack_a);
 	sb(stack_b);

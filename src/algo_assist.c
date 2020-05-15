@@ -12,10 +12,10 @@
 
 #include "../push_swap.h"
 
-int get_min(t_list **stack)
+int     get_min(t_list **stack)
 {
-    t_list *curr;
-    int min;
+    t_list  *curr;
+    int     min;
 
     curr = *stack;
     min = curr->data;
@@ -29,9 +29,9 @@ int get_min(t_list **stack)
     return (min);
 }
 
-int get_midlen(int len)
+int     get_midlen(int len)
 {
-    int midlen;
+    int     midlen;
 
     midlen = len / 2;
     if ((len % 2) != 0)
@@ -39,10 +39,10 @@ int get_midlen(int len)
     return (midlen);
 }
 
-int get_pos(t_list **stack, int data)
+int     get_pos(t_list **stack, int data)
 {
-    t_list *curr;
-    int *pos;
+    t_list  *curr;
+    int     *pos;
 
     curr = *stack;
     pos = 1;

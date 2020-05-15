@@ -3,18 +3,18 @@
 /*                                                        :::      ::::::::   */
 /*   rev_rotater.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: krissyleemc <krissyleemc@student.42.fr>    +#+  +:+       +#+        */
+/*   By: kris <kris@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/05/05 13:49:05 by kris              #+#    #+#             */
-/*   Updated: 2020/05/14 19:40:25 by krissyleemc      ###   ########.fr       */
+/*   Updated: 2020/05/15 09:04:01 by kris             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../push_swap.h"
 
-static void move_down(t_list **stack)
+static void		move_down(t_list **stack)
 {
-	char *last;
+	char	*last;
 
 	if (*stack == NULL)
 		return;
@@ -27,17 +27,17 @@ static void move_down(t_list **stack)
 	ft_strdel(&last);
 }
 
-void rra(t_list **stack_a)
+void			rra(t_list **stack_a)
 {
 	move_down(stack_a);
 }
 
-void rrb(t_list **stack_b)
+void			rrb(t_list **stack_b)
 {
 	move_down(stack_b);
 }
 
-void rrr(t_list **stack_a, t_list **stack_b)
+void			rrr(t_list **stack_a, t_list **stack_b)
 {
 	rra(stack_a);
 	rrb(stack_b);

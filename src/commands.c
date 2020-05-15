@@ -1,18 +1,18 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   operations.c                                       :+:      :+:    :+:   */
+/*   commands.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: krissyleemc <krissyleemc@student.42.fr>    +#+  +:+       +#+        */
+/*   By: kris <kris@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/05/02 16:58:45 by kris              #+#    #+#             */
-/*   Updated: 2020/05/14 19:56:21 by krissyleemc      ###   ########.fr       */
+/*   Updated: 2020/05/15 09:02:37 by kris             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../push_swap.h"
 
-int op(t_list **stack_a, t_list **stack_b, char *cmd)
+int			cmds(t_list **stack_a, t_list **stack_b, char *cmd)
 {
 	if (ft_strcmp(cmd, "sa") == 0)
 		sa(stack_a);
@@ -41,8 +41,8 @@ int op(t_list **stack_a, t_list **stack_b, char *cmd)
 	return (2);
 }
 
-void print(t_list **stack_a, t_list **stack_b, char *cmd)
+void		print(t_list **stack_a, t_list **stack_b, char *cmd)
 {
-	if (op(stack_a, stack_b, cmd) == 2)
+	if (cmds(stack_a, stack_b, cmd) == 2)
 		ft_putendl(cmd);
 }

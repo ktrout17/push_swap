@@ -3,16 +3,16 @@
 /*                                                        :::      ::::::::   */
 /*   algo_small.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: krissyleemc <krissyleemc@student.42.fr>    +#+  +:+       +#+        */
+/*   By: kris <kris@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/05/14 19:58:14 by krissyleemc       #+#    #+#             */
-/*   Updated: 2020/05/14 20:45:25 by krissyleemc      ###   ########.fr       */
+/*   Updated: 2020/05/15 08:50:31 by kris             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../push_swap.h"
 
-static void sort3_cmds(t_list **stack_a, int first, int mid, int last)
+static void     sort3_cmds(t_list **stack_a, int first, int mid, int last)
 {
     if ((first < mid) && (first > last))
         print(stack_a, NULL, "rra");
@@ -32,7 +32,7 @@ static void sort3_cmds(t_list **stack_a, int first, int mid, int last)
     }
 }
 
-void sort3(t_list **stack_a)
+void            sort3(t_list **stack_a)
 {
     int first;
     int mid;
@@ -44,7 +44,7 @@ void sort3(t_list **stack_a)
     sort3_cmds(stack_a, first, mid, last);
 }
 
-void sort5(t_list **stack_a, t_list **stack_b)
+void            sort5(t_list **stack_a, t_list **stack_b)
 {
     int min;
     int steps;
