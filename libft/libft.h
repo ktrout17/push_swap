@@ -6,7 +6,7 @@
 /*   By: kris <kris@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/21 08:13:54 by ktrout            #+#    #+#             */
-/*   Updated: 2020/05/15 13:20:43 by kris             ###   ########.fr       */
+/*   Updated: 2020/05/15 14:26:53 by kris             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,7 @@ typedef struct		s_lst
 {
 	void			*content;
 	size_t			content_size;
-	struct s_list	*next;
+	struct s_lst	*next;
 }					t_lst;
 
 void				*ft_memset(void *b, int c, size_t len);

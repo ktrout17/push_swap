@@ -6,7 +6,7 @@
 /*   By: kris <kris@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/03/17 11:22:33 by kris              #+#    #+#             */
-/*   Updated: 2020/05/15 13:43:42 by kris             ###   ########.fr       */
+/*   Updated: 2020/05/15 14:38:43 by kris             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -66,7 +66,7 @@ char				*delete_last(t_list **stack);
 char				*delete_by_index(t_list **stack, int n);
 char				*delete_by_data(t_list **stack, int data);
 t_list				*new_node(void);
-void				*init_node(t_list *node, int data, t_list *next);
+void				init_node(t_list *node, int data, t_list *next);
 void				add_tohead(t_list **stack, int data);
 void				add_totail(t_list **stack, int data);
 void				free_stack(t_list *head);

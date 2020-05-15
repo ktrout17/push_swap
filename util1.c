@@ -21,7 +21,7 @@ char		*delete_first(t_list **stack)
 	next = NULL;
 	if (*stack == NULL)
 		return (ret);
-	next = (*stack)->data;
+	next = (*stack)->next;
 	ret = ft_itoa((*stack)->data);
 	free(*stack);
 	*stack = next;

@@ -18,7 +18,7 @@ all: $(NAME)
 
 $(NAME):
 	cd libft && make
-	@gcc $() -c $(SRC)
+	@gcc $(FLAGS) -c $(SRC)
 	@ar rc $(NAME) $(OBJ)
 	@ranlib $(NAME)
 	$(LINKLIBFT) $(CHECKER) $(NAME) $(LIBFT)

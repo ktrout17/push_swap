@@ -6,7 +6,7 @@
 /*   By: kris <kris@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/05/15 12:30:21 by kris              #+#    #+#             */
-/*   Updated: 2020/05/15 13:41:08 by kris             ###   ########.fr       */
+/*   Updated: 2020/05/15 14:38:24 by kris             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,7 @@ t_list		*new_node(void)
 	return (node);
 }
 
-void		*init_node(t_list *node, int data, t_list *next)
+void		init_node(t_list *node, int data, t_list *next)
 {
 	node->data = data;
 	node->next = next;

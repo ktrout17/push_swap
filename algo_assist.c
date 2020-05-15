@@ -6,7 +6,7 @@
 /*   By: kris <kris@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/05/14 20:25:28 by krissyleemc       #+#    #+#             */
-/*   Updated: 2020/05/15 13:59:33 by kris             ###   ########.fr       */
+/*   Updated: 2020/05/15 14:25:17 by kris             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -42,7 +42,7 @@ int     get_midlen(int len)
 int     get_pos(t_list **stack, int data)
 {
     t_list  *curr;
-    int     *pos;
+    int     pos;
 
     curr = *stack;
     pos = 1;
