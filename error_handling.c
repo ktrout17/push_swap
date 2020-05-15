@@ -6,11 +6,11 @@
 /*   By: kris <kris@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/05/02 14:21:21 by kris              #+#    #+#             */
-/*   Updated: 2020/05/15 09:00:17 by kris             ###   ########.fr       */
+/*   Updated: 2020/05/15 12:21:40 by kris             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../push_swap.h"
+#include "push_swap.h"
 
 static int		isargstr(char *str)
 {

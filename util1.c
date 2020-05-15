@@ -10,7 +10,7 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../push_swap.h"
+#include "push_swap.h"
 
 char		*delete_first(t_list **stack)
 {
@@ -50,59 +50,53 @@ char		*delete_last(t_list **stack)
 	return (ret);
 }
 
-t_list		*new_node(void)
+char		*delete_by_index(t_list **stack, int n)
 {
-	t_list	*node;
-	node = malloc(sizeof(t_list));
-	return (node);
-}
+	int			i;
+	char		*ret;
+	t_list		*prev;
+	t_list		*to_del;
 
-void		*init_node(t_list *node, int data, t_list *next)
-{
-	node->data = data;
-	node->next = next;
-}
-
-void		add_tohead(t_list **stack, int data)
-{
-	t_list	*node_new;
-
-	node_new = new_node();
-	init_node(node_new, data, *stack);
-	*stack = node_new;
-}
-
-void		add_totail(t_list **stack, int data)
-{
-	t_list	*curr;
-
-	curr = *stack;
-	while (curr->next != NULL)
-		curr = curr->next;
-	curr->next = new_node();
-	init_node(curr->next, data, NULL);
-}
-
-void		free_stack(t_list *head)
-{
-	t_list	*temp;
-
-	while (head != NULL)
+	i = 0;
+	ret = "Error\n";
+	prev = *stack;
+	to_del = NULL;
+	if (n == 0)
+		return (delete_first(stack));
+	while (i < (n - 1))
 	{
-		temp = head;
-		head = head->next;
-		free(temp);
+		if (prev->next == NULL)
+			return (ret);
+		prev = prev->next;
+		i++;
 	}
+	to_del = prev->next;
+	ret = ft_itoa(to_del->data);
+	prev->next = to_del->next;
+	free(to_del);
+	return (ret);
 }
 
-void		free_str(t_list *head)
+char	*delete_by_data(t_list **stack, int data)
 {
-	t_list	*temp;
+	char		*ret;
+	t_list		*prev;
+	t_list		*to_del;
 
-	while (head != NULL)
+	ret = "Error\n";
+	prev = *stack;
+	to_del = NULL;
+	if (prev->data == data)
+		return (delete_first(stack));
+	while (prev)
 	{
-		temp = head;
-		head = head->next;
-		free(temp);
+		to_del = prev->next;
+		if (to_del->data == data)
+			break ;
+		prev = prev->next;
 	}
+	ret = ft_itoa(to_del->data);
+	prev->next = to_del->next;
+	free(to_del);
+	return (ret);
 }

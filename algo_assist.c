@@ -6,11 +6,11 @@
 /*   By: kris <kris@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/05/14 20:25:28 by krissyleemc       #+#    #+#             */
-/*   Updated: 2020/05/15 09:48:21 by kris             ###   ########.fr       */
+/*   Updated: 2020/05/15 12:21:29 by kris             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../push_swap.h"
+#include "push_swap.h"
 
 int     get_min(t_list **stack)
 {

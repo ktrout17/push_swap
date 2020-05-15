@@ -6,11 +6,11 @@
 /*   By: kris <kris@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/05/05 10:40:41 by krissyleemc       #+#    #+#             */
-/*   Updated: 2020/05/15 09:06:41 by kris             ###   ########.fr       */
+/*   Updated: 2020/05/15 12:21:44 by kris             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../push_swap.h"
+#include "push_swap.h"
 
 int     isempty(t_list **stack)
 {

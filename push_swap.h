@@ -6,7 +6,7 @@
 /*   By: kris <kris@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/03/17 11:22:33 by kris              #+#    #+#             */
-/*   Updated: 2020/05/15 12:11:29 by kris             ###   ########.fr       */
+/*   Updated: 2020/05/15 12:37:51 by kris             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -63,6 +63,8 @@ void				rrr(t_list **stack_a, t_list **stack_b);
 /* util functions */
 char				*delete_first(t_list **stack);
 char				*delete_last(t_list **stack);
+char				*delete_by_index(t_list **stack, int n);
+char				*delete_by_data(t_list **stack, int data);
 t_list				*new_node(void);
 void				*init_node(t_list *node, int data, t_list *next);
 void				add_tohead(t_list **stack, int data);
@@ -97,5 +99,6 @@ ts_stack        	*get_smallsteps(t_list **stack_a, t_list **stack_b);
 void        		algo_stack(t_list **stack_a, t_list **stack_b);
 void				sort3(t_list **stack_a);
 void				sort5(t_list **stack_a, t_list **stack_b);
+void        		sort(t_list *stack_a, t_list **stack_b);
 
 #endif

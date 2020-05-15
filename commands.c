@@ -6,11 +6,11 @@
 /*   By: kris <kris@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/05/02 16:58:45 by kris              #+#    #+#             */
-/*   Updated: 2020/05/15 09:02:37 by kris             ###   ########.fr       */
+/*   Updated: 2020/05/15 12:21:40 by kris             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../push_swap.h"
+#include "push_swap.h"
 
 int			cmds(t_list **stack_a, t_list **stack_b, char *cmd)
 {

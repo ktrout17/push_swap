@@ -6,11 +6,11 @@
 /*   By: kris <kris@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/05/15 09:15:11 by kris              #+#    #+#             */
-/*   Updated: 2020/05/15 12:14:37 by kris             ###   ########.fr       */
+/*   Updated: 2020/05/15 12:26:43 by kris             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../push_swap.h"
+#include "push_swap.h"
 
 static void pushbcmds_algo(t_list **stack_a, t_list *stack_b)
 {
@@ -59,7 +59,7 @@ static void			pushtoa(t_list **stack_a, t_list **stack_b)
 	{
 		data = get_max(stack_b);
 		steps = get_steps(stack_b, data);
-		if (get_pos(stack_b, data) > get_midlen(list_len(stack_b)))
+		if (get_pos(stack_b, data) > get_midlen(listlen(stack_b)))
 			cmd = "rrb";
 		else
 			cmd = "rb";

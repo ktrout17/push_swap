@@ -1,34 +1,37 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   pusher.c                                           :+:      :+:    :+:   */
+/*   util4.c                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: kris <kris@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/05/07 08:27:41 by kris              #+#    #+#             */
-/*   Updated: 2020/05/15 12:21:41 by kris             ###   ########.fr       */
+/*   Created: 2020/05/15 12:32:23 by kris              #+#    #+#             */
+/*   Updated: 2020/05/15 12:32:50 by kris             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-static void		push(t_list **from, t_list **to)
+void		free_stack(t_list *head)
 {
-	char	*top;
+	t_list	*temp;
 
-	top = delete_first(from);
-	if (ft_strcmp(top, "Error") == 0)
-		return;
-	add_tohead(to, ft_atoi(top));
-	ft_strdel(&top);
+	while (head != NULL)
+	{
+		temp = head;
+		head = head->next;
+		free(temp);
+	}
 }
 
-void		pa(t_list **stack_b, t_list **stack_a)
+void		free_str(t_list *head)
 {
-	push(stack_b, stack_a);
-}
+	t_list	*temp;
 
-void		pb(t_list **stack_a, t_list **stack_b)
-{
-	push(stack_a, stack_b);
+	while (head != NULL)
+	{
+		temp = head;
+		head = head->next;
+		free(temp);
+	}
 }
