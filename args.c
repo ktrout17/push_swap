@@ -6,7 +6,7 @@
 /*   By: kris <kris@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/03/17 14:15:56 by kris              #+#    #+#             */
-/*   Updated: 2020/05/15 12:21:39 by kris             ###   ########.fr       */
+/*   Updated: 2020/05/16 10:17:26 by kris             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,17 +14,17 @@
 
 static int      get_args(t_list **stack, char **argv, int start)
 {
-    int     val;
+    int     data;
     int     i;
 
     if (israngeint(argv[start]) == 0)
         return (-1);
-    val = ft_atoi(argv[start]);
+    data = ft_atoi(argv[start]);
     i = ++start;
     *stack = new_node();
     if (stack == NULL)
         return (-1);
-    init_node(*stack, val, NULL);
+    init_node(*stack, data, NULL);
     while (argv[i])
     {
         if (israngeint(argv[i]) == 0)
@@ -32,8 +32,8 @@ static int      get_args(t_list **stack, char **argv, int start)
             free_stack(*stack);
             return (-1);
         }
-        val = ft_atoi(argv[i]);
-        add_totail(stack, val);
+        data = ft_atoi(argv[i]);
+        add_totail(stack, data);
         i++;
     }
     return (2);

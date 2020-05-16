@@ -15,9 +15,11 @@
 static int		inst(t_list **stack_a, t_list **stack_b)
 {
 	char	*line;
+	int		gnl;
 
 	line = NULL;
-	while ((get_next_line(0, &line)) != 0)
+	gnl = get_next_line(0, &line);
+	while (gnl != 0)
 	{
 		if (cmds(stack_a, stack_b, line) == -1)
 		{
@@ -26,6 +28,7 @@ static int		inst(t_list **stack_a, t_list **stack_b)
 			ft_putstr("Error\n");
 			return (-1);
 		}
+		gnl = get_next_line(0, &line);
 	}
 	return (2);
 }
@@ -45,5 +48,9 @@ int				main(int argc, char **argv)
 			return (-1);
 		if (inst(&stack_a, &stack_b) == -1)
 			return (-1);
+		sorted(&stack_a, &stack_b);
+		free_stack(stack_a);
+		free_stack(stack_b);
 	}
+	return (0);
 }

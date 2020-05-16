@@ -6,7 +6,7 @@
 /*   By: kris <kris@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/05/02 14:21:21 by kris              #+#    #+#             */
-/*   Updated: 2020/05/15 13:36:54 by kris             ###   ########.fr       */
+/*   Updated: 2020/05/16 10:21:14 by kris             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -96,10 +96,10 @@ int				isdup(t_list **stack)
 
 	node1 = *stack;
 	node2 = NULL;
-	while (node1 && (node1->next))
+	while (node1 != NULL && (node1->next != NULL))
 	{
 		node2 = node1->next;
-		while (node2)
+		while (node2 != NULL)
 		{
 			if (node1->data == node2->data)
 			{
