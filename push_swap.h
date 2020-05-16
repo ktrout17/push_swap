@@ -6,7 +6,7 @@
 /*   By: kris <kris@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/03/17 11:22:33 by kris              #+#    #+#             */
-/*   Updated: 2020/05/15 14:38:43 by kris             ###   ########.fr       */
+/*   Updated: 2020/05/16 10:44:46 by kris             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,8 +15,6 @@
 #define INT_MIN (-2147483648)
 #define INT_MAX 2147483648
 #include "libft/libft.h"
-#include "libft/get_next_line.h"
-#include <unistd.h>
 
 typedef struct		s_list
 {

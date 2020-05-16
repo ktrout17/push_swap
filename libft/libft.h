@@ -6,15 +6,16 @@
 /*   By: kris <kris@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/21 08:13:54 by ktrout            #+#    #+#             */
-/*   Updated: 2020/05/15 14:26:53 by kris             ###   ########.fr       */
+/*   Updated: 2020/05/16 10:45:41 by kris             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef LIBFT_H
 # define LIBFT_H
-
+# define BUFF_SIZE 32
 # include <string.h>
 # include <stdlib.h>
+# include <unistd.h>
 
 typedef struct		s_lst
 {
@@ -90,5 +91,6 @@ int					ft_intlen(int n);
 t_lst				*ft_lstnew(void const *content, size_t content_size);
 t_lst				*ft_lstnewstr(char *content);
 t_lst				*ft_lstmap(t_lst *lst, t_lst *(*f)(t_lst *elem));
+int					get_next_line(const int fd, char **line);
 
 #endif
