@@ -10,7 +10,9 @@ $(NAME):
 	@gcc $(FLAGS) $(OPTIONS) $(SRC)
 	@ar rc $(NAME) $(OBJ)
 	@ranlib $(NAME)
-	@echo "libft.a compiled successfully"
+	@echo "___________________________________"
+	@echo "\nlibft compiled successfully"
+	@echo "___________________________________\n"
 
 clean:
 	@/bin/rm -f $(OBJ)

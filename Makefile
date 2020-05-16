@@ -17,20 +17,22 @@ OBJ = $(SRC:.c=.o)
 all: $(NAME)
 
 $(NAME):
-	cd libft && make
+	@cd libft && make
 	@gcc $(FLAGS) -c $(SRC)
 	@ar rc $(NAME) $(OBJ)
 	@ranlib $(NAME)
 	$(LINKLIBFT) $(CHECKER) $(NAME) $(LIBFT)
 	$(LINKLIBFT) $(PUSH_SWAP) $(NAME) $(LIBFT)
-	@echo "push_swap.a compiled successfully"
+	@echo "___________________________________"
+	@echo "\npush_swap compiled successfully"
+	@echo "___________________________________"
 
 clean:
-	cd libft && make clean
+	@cd libft && make clean
 	@/bin/rm -f $(OBJ)
 
 fclean: clean
-	cd libft && make fclean
+	@cd libft && make fclean
 	@/bin/rm -f $(NAME)
 	@/bin/rm -f checker
 	@/bin/rm -f push_swap
